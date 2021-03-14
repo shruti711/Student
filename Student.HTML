@@ -45,30 +45,14 @@
             margin: 10px 0;
         }
 
-        .autocomplete {
-            position: relative;
-            display: flex;
-            justify-content: space-around;
-            background-color: rgb(235, 238, 240);
-            padding: 0.75rem 0;
-            margin: 0.75rem;
-            border-radius: 20px;
-            width: fit-content;
-        }
-
         #searchButton {
             border: none;
             padding: 0 0.75rem;
-            border-radius: 70px;
+            border-radius: 20px;
             height: 35px;
         }
 
-        .inputMessage {
-            display: flex;
-            align-items: center;
-        }
-
-        .twitterIcon {
+        .Icons {
             text-align: center;
             color: #78909c;
         }
@@ -90,41 +74,37 @@
             text-align: center;
         }
 
+        .topIcon {
+            text-align: center;
+        }
+
         .content {
             height: 100%;
             background-color: #788c9c12;
             padding: 30px;
         }
 
-        textarea:focus,
-        input:focus,
-        button:focus {
-            outline: none;
-        }
-
         form {
             width: 100px;
             height: 100px;
-            background-color:#fff;
+            background-color: #fff;
         }
 
         form p {
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            line-height: 100px;
+            position: absolute;
+            bottom: 150px;
+            left: 500px;
         }
 
         form input {
-            position: absolute;
             margin: 0;
             padding: 0;
             width: 100%;
             height: 100%;
             outline: none;
             opacity: 0;
+            cursor: pointer;
         }
-
     </style>
 </head>
 
@@ -132,17 +112,19 @@
     <div class="mainContainer">
         <div class="container">
             <div class="leftSideBar">
+                <div class="topIcon">
                 <i class="fas fa-spinner fa-2x"></i>
+                </div>
                 <div class="flexContainer">
-                    <div class="twitterIcon">
+                    <div class="Icons">
                         <i class="fas fa-user-alt"></i>
                         <div>Students</div>
                     </div>
-                    <div class="twitterIcon">
+                    <div class="Icons">
                         <i class="fas fa-notes-medical"></i>
                         <div>Lession Plan</div>
                     </div>
-                    <div class="twitterIcon">
+                    <div class="Icons">
                         <i class="fas fa-cog"></i>
                         <div>Setting</div>
                     </div>
@@ -155,9 +137,8 @@
                         <i class="fas fa-caret-left"></i> Videos
                     </div>
                     <div class="search">
-                        <input type="url" name="url" id="searchButton" placeholder="Insert URL here"
-                            pattern="https://.*" size="100" required>
-                            <p> or </p>
+                        <input type="url" name="url" id="searchButton" placeholder="Insert URL here" size="100" required>
+                        <p> or </p>
                         <form method="POST">
                             <input type="file" multiple>
                             <p>Upload</p>
