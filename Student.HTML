@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css"
+        href="file:///C:/Users/shrut/Downloads/fontawesome-free-5.15.2-web/fontawesome-free-5.15.2-web/css/all.css">
+    </link>
+    <link rel="stylesheet" href="Twitter.CSS">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .mainContainer {
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 0px 10px;
+            height: 100%;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .leftSideBar {
+            font-size: 19px;
+            padding: 40px;
+            box-shadow: 1px 1px 5px 1px #88888852;
+        }
+
+        .main {
+            flex: 1;
+        }
+
+        .flexContainer {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0;
+            align-items: center;
+            gap: 30px;
+            margin: 10px 0;
+        }
+
+        .autocomplete {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(235, 238, 240);
+            padding: 0.75rem 0;
+            margin: 0.75rem;
+            border-radius: 20px;
+            width: fit-content;
+        }
+
+        #searchButton {
+            border: none;
+            padding: 0 0.75rem;
+            border-radius: 70px;
+            height: 35px;
+        }
+
+        .inputMessage {
+            display: flex;
+            align-items: center;
+        }
+
+        .twitterIcon {
+            text-align: center;
+            color: #78909c;
+        }
+
+        .header {
+            height: 6rem;
+        }
+
+        .video {
+            font-size: large;
+            color: #78909c;
+        }
+
+        .search {
+            padding: 30px 100px;
+        }
+
+        .search p {
+            text-align: center;
+        }
+
+        .content {
+            height: 100%;
+            background-color: #788c9c12;
+            padding: 30px;
+        }
+
+        textarea:focus,
+        input:focus,
+        button:focus {
+            outline: none;
+        }
+
+        form {
+            width: 100px;
+            height: 100px;
+            background-color:#fff;
+        }
+
+        form p {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        form input {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            opacity: 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="container">
+            <div class="leftSideBar">
+                <i class="fas fa-spinner fa-2x"></i>
+                <div class="flexContainer">
+                    <div class="twitterIcon">
+                        <i class="fas fa-user-alt"></i>
+                        <div>Students</div>
+                    </div>
+                    <div class="twitterIcon">
+                        <i class="fas fa-notes-medical"></i>
+                        <div>Lession Plan</div>
+                    </div>
+                    <div class="twitterIcon">
+                        <i class="fas fa-cog"></i>
+                        <div>Setting</div>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <div class="header"></div>
+                <div class="content">
+                    <div class="video">
+                        <i class="fas fa-caret-left"></i> Videos
+                    </div>
+                    <div class="search">
+                        <input type="url" name="url" id="searchButton" placeholder="Insert URL here"
+                            pattern="https://.*" size="100" required>
+                            <p> or </p>
+                        <form method="POST">
+                            <input type="file" multiple>
+                            <p>Upload</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
